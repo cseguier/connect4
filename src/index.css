@@ -1,0 +1,138 @@
+html {
+  height: 100%;
+  font-size: 10px;
+}
+
+body {
+  background-color: #272727;
+  color: #bebebe;
+  font-family: sans-serif;
+  height: 100%;
+  text-align: center;
+}
+
+p.playing {
+  font-size: 30px;
+}
+
+div.rowContainer {
+  height: 95px;
+}
+
+div.victoryBanner {
+  padding-top: 30px;
+  font-size: 40px;
+}
+
+table {
+  font-size: 40px;
+  margin: 30px;
+  padding: 20px;
+  display: inline-block;
+}
+
+table.tokenB {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+table.gameGridBoard {
+  border: 3px solid #6495ed;
+  border-radius: 10%;
+  border-top: none;
+}
+
+table.gameHistory {
+  border: 1px solid #6495ed;
+  border-radius: 10%;
+  border-top: none;
+  font-size: 10px;
+  margin: 30px;
+  padding: 5px;
+  margin-top: 0px;
+}
+
+table.yellow {
+  border: 1px solid #ffe643;
+}
+
+table.red {
+  border: 1px solid #c01d1d;
+}
+
+td.gameHistory {
+  width: 16px;
+  height: 16px;
+}
+
+td {
+  width: 60px;
+  height: 60px;
+}
+
+div.lineup {
+  display: inline-block;
+}
+
+button {
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: box-shadow .15s, transform .15s;
+  will-change: box-shadow, transform;
+  border: none;
+}
+
+button.topMenu {
+  background-color: transparent;
+  color: cornflowerblue;
+  border-radius: 16px;
+  box-shadow: cornflowerblue 0 -3px 0 inset;
+  height: 48px;
+  width: 121px;
+  margin: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 18px;
+}
+
+button.topMenu:hover {
+  box-shadow: black 0 4px 8px, cornflowerblue 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+button.topMenu:active {
+  box-shadow: black 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+button.arrows {
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: rgb(190, 190, 190);
+  font-size: 60px;
+}
+
+button.arrows:hover {
+  transform: translateY(5px);
+  color: cornflowerblue;
+}
+
+button.arrows:active {
+  transform: translateY(10px);
+}
+
+.yPlayer {
+  color: rgb(255, 230, 67);
+}
+
+.rPlayer {
+  color: rgb(192, 29, 29);
+}
+
+#root {
+  height: 100%;
+}
