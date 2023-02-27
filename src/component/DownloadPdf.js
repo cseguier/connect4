@@ -1,6 +1,6 @@
 import React from 'react';
 import { Page, Text, View, Document } from '@react-pdf/renderer';
-import { FULL, EMPTY, BOARD, HEIGHT } from './Parameters'
+import { BOARD } from './Parameters'
 
 const pageStyle = {
   paddingTop: 16,
@@ -85,6 +85,8 @@ function getTableCell(content) {
       return <Text style={ytableCellStyle}>O</Text>;
     case 'rPlayer':
       return <Text style={rtableCellStyle}>O</Text>;
+    default:
+      return <Text style={rtableCellStyle}>X</Text>;
   }
 }
 
