@@ -122,7 +122,7 @@ export default class Connect4 extends React.Component {
             <button className="topMenu" onClick={() => this.resetBoard()}>New Game</button>
           </div>
           <div>
-            <PDFDownloadLink document={downloadPdf(this.state.boardHistory, this.state.winnerHistory)} fileName="somename.pdf">
+            <PDFDownloadLink document={downloadPdf(this.state.boardHistory, this.state.winnerHistory)} fileName="cseguier_connect4.pdf">
               {({ blob, url, loading, error }) => <button className="topMenu">Download</button>}
             </PDFDownloadLink>
           </div>
