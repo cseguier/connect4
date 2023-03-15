@@ -105,7 +105,6 @@ export default class Connect4 extends React.Component {
         <span className={this.state.player ? 'redColor' : 'yellowColor'}>
           {this.state.winner}
         </span>  {this.state.gameStatus === 'isWin' ? 'Victory' : 'Draw'}
-        {console.log(this.state.gameStatus)}
       </div>
 
 

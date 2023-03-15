@@ -78,7 +78,6 @@ const ytableCellStyle = {
 
 
 function getTableCell(content) {
-  console.log(content)
   switch (content) {
     case '':
       return <Text style={dtableCellStyle}>.</Text>;
