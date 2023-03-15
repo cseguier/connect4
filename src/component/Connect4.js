@@ -114,6 +114,10 @@ export default class Connect4 extends React.Component {
     return (
       <div>
 
+        <div className="upSquare">
+          <a className="backToTheGate" href="https://cseguier-gate.netlify.app/">Go back to the Gate</a>
+        </div>
+
         <div className="topMenuContainer">
           <div>
             <button className="topMenu" onClick={() => this.resetGame()}>Reset</button>

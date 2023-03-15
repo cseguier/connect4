@@ -11,6 +11,36 @@ body {
   text-align: center;
 }
 
+div.upSquare {
+  width: 0;
+  height: 0;
+  border-top: 140px solid #6495ed;
+  border-bottom: 140px solid transparent;
+  border-left: 140px solid transparent;
+  position: absolute;
+  right: 0;
+}
+
+a.backToTheGate {
+  text-decoration: none;
+  color: #272727;
+  position: absolute;
+  top: -110px;
+  width: 100px;
+  left: -100px;
+  text-align: center;
+  font-size: 16px;
+  font-family: arial;
+  transform: rotate(45deg);
+  display: block;
+  transition: color .15s;
+  will-change: color;
+}
+
+a.backToTheGate:hover {
+  color: #ffffff;
+}
+
 p.playing {
   font-size: 30px;
 }
