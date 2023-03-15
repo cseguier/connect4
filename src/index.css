@@ -24,6 +24,10 @@ div.victoryBanner {
   font-size: 40px;
 }
 
+div.topMenuContainer {
+  display: inline-flex;
+}
+
 table {
   font-size: 40px;
   margin: 30px;
@@ -54,12 +58,16 @@ table.gameHistory {
   margin-top: 0px;
 }
 
-table.yellow {
+table.yellowBorder {
   border: 1px solid #ffe643;
 }
 
-table.red {
+table.redBorder {
   border: 1px solid #c01d1d;
+}
+
+table.drawBorder {
+  border: 1px solid #6495ed;
 }
 
 td.gameHistory {
@@ -81,18 +89,18 @@ button {
   justify-content: center;
   cursor: pointer;
   touch-action: manipulation;
-  transition: box-shadow .15s, transform .15s;
-  will-change: box-shadow, transform;
+  transition: transform .15s, border .15s;
+  will-change: transform, border;
   border: none;
 }
 
 button.topMenu {
   background-color: transparent;
-  color: cornflowerblue;
+  color: #6495ed;
+  border: 1px solid #6495ed;
   border-radius: 16px;
-  box-shadow: cornflowerblue 0 -3px 0 inset;
+  border-bottom: none;
   height: 48px;
-  width: 121px;
   margin: 10px;
   padding-left: 16px;
   padding-right: 16px;
@@ -100,37 +108,45 @@ button.topMenu {
 }
 
 button.topMenu:hover {
-  box-shadow: black 0 4px 8px, cornflowerblue 0 -3px 0 inset;
+  border: 1px solid #6495ed;
+  box-shadow: #000000 0 4px 8px;
   transform: translateY(-2px);
 }
 
 button.topMenu:active {
-  box-shadow: black 0 3px 7px inset;
+  border: 1px solid #000000;
+  box-shadow: #000000 0 3px 7px inset;
   transform: translateY(2px);
 }
 
 button.arrows {
+  width: 60px;
+  height: 60px;
   margin-bottom: 10px;
   background-color: transparent;
-  color: rgb(190, 190, 190);
+  color: #bebebe;
   font-size: 60px;
 }
 
 button.arrows:hover {
   transform: translateY(5px);
-  color: cornflowerblue;
+  color: #6495ed;
 }
 
 button.arrows:active {
   transform: translateY(10px);
 }
 
-.yPlayer {
-  color: rgb(255, 230, 67);
+.yellowColor {
+  color: #ffe643;
 }
 
-.rPlayer {
-  color: rgb(192, 29, 29);
+.redColor {
+  color: #c01d1d;
+}
+
+.drawColor {
+  color: #6495ed;
 }
 
 #root {

@@ -78,12 +78,13 @@ const ytableCellStyle = {
 
 
 function getTableCell(content) {
+  console.log(content)
   switch (content) {
     case '':
       return <Text style={dtableCellStyle}>.</Text>;
-    case 'yPlayer':
+    case 'yellowColor':
       return <Text style={ytableCellStyle}>O</Text>;
-    case 'rPlayer':
+    case 'redColor':
       return <Text style={rtableCellStyle}>O</Text>;
     default:
       return <Text style={rtableCellStyle}>X</Text>;
@@ -93,7 +94,6 @@ function getTableCell(content) {
 function getTables(boards, winners) {
   var layout = []
   boards.forEach((e, i) => {
-    console.log(winners, winners[i])
     layout.push(
       <View style={displayStyle}>
         <View style={tableRowStyle}>
@@ -107,7 +107,7 @@ function getTables(boards, winners) {
           </View>
 
           <View style={sideTextStyle}>
-            <Text>{winners[i] ? 'Yellow score' : 'Red score'}</Text>
+            <Text>{winners[i] === '' ? 'Draw' : 'Point to ' + winners[i]}</Text>
           </View>
 
         </View>
@@ -123,10 +123,10 @@ function getScore(winners) {
   return (
     <View style={headerStyle}>
       <Text>
-        {cpt[true] === cpt[false] ? 'Draw' : cpt[true] > cpt[false] ? 'Yellow Won' : 'Red Won'}
+        {cpt['Yellow'] === cpt['Red'] ? 'Draw' : cpt['Yellow'] > cpt['Red'] ? 'Yellow Won' : 'Red Won'}
       </Text>
       <Text>
-        Yellow - {cpt[true]} / Red - {cpt[false]}
+        Yellow - {cpt['Yellow'] ? cpt['Yellow'] : 0} / Red - {cpt['Red'] ? cpt['Red'] : 0}
       </Text>
     </View>
   )

@@ -10,7 +10,7 @@ export default class Connect4 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isWin: false,
+      gameStatus: 'isGoing',
       winner: '',
       player: true,
       board: Array(42).fill(''),
@@ -22,29 +22,51 @@ export default class Connect4 extends React.Component {
 
   resetBoard() {
     this.setState({
-      isWin: false,
+      gameStatus: 'isGoing',
       winner: '',
       player: (this.state.winner !== '' ? !(this.state.winner) : true),
       board: Array(42).fill(''),
     });
   }
 
+  resetGame() {
+    this.setState({
+      gameStatus: 'isGoing',
+      winner: '',
+      player: true,
+      board: Array(42).fill(''),
+      boardHistory: [],
+      winnerHistory: [],
+    });
+  }
+
 
   addNewToken(e) {
-    const getStatus = getNewBoard(e, this.state.player, this.state.board)
-
-    if (getStatus.isWin) {
-      this.setState({
-        isWin: getStatus.isWin,
-        winner: this.state.player,
-        boardHistory: [getStatus.newBoard, ...this.state.boardHistory],
-        winnerHistory: [this.state.player, ...this.state.winnerHistory],
-      })
+    const gameStatus = getNewBoard(e, this.state.player, this.state.board)
+    switch (gameStatus.gameState) {
+      case 'isWin':
+        this.setState({
+          gameStatus: 'isWin',
+          winner: (this.state.player ? 'Yellow' : 'Red'),
+          boardHistory: [gameStatus.newBoard, ...this.state.boardHistory],
+          winnerHistory: [(this.state.player ? 'Yellow' : 'Red'), ...this.state.winnerHistory],
+        });
+        break;
+      case 'isDraw':
+        this.setState({
+          gameStatus: 'isDraw',
+          winner: '',
+          boardHistory: [gameStatus.newBoard, ...this.state.boardHistory],
+          winnerHistory: ['', ...this.state.winnerHistory],
+        });
+        break;
+      default: ;
     }
 
+
     this.setState({
-      board: getStatus.newBoard,
-      player: (JSON.stringify(getStatus.newBoard) === JSON.stringify(this.state.board)) ? this.state.player : !this.state.player
+      board: gameStatus.newBoard,
+      player: (JSON.stringify(gameStatus.newBoard) === JSON.stringify(this.state.board)) ? this.state.player : !this.state.player
     });
   }
 
@@ -80,38 +102,33 @@ export default class Connect4 extends React.Component {
 
     const victoryBanner =
       <div className="victoryBanner">
-        <span className={this.state.winner ? 'yPlayer' : 'rPlayer'}>
-          {this.state.winner ? 'Yellow' : 'Red'}
-        </span> Victory
+        <span className={this.state.player ? 'redColor' : 'yellowColor'}>
+          {this.state.winner}
+        </span>  {this.state.gameStatus === 'isWin' ? 'Victory' : 'Draw'}
+        {console.log(this.state.gameStatus)}
       </div>
 
 
-    const displayLine = (this.state.isWin ? victoryBanner : renderButtons)
+    const displayLine = (this.state.gameStatus !== 'isGoing' ? victoryBanner : renderButtons)
 
     return (
       <div>
 
-        <button className="topMenu"
-          onClick={() => this.resetBoard()}>New Game</button>
+        <div className="topMenuContainer">
+          <div>
+            <button className="topMenu" onClick={() => this.resetGame()}>Reset</button>
+          </div>
+          <div>
+            <button className="topMenu" onClick={() => this.resetBoard()}>New Game</button>
+          </div>
+          <div>
+            <PDFDownloadLink document={downloadPdf(this.state.boardHistory, this.state.winnerHistory)} fileName="somename.pdf">
+              {({ blob, url, loading, error }) => <button className="topMenu">Download</button>}
+            </PDFDownloadLink>
+          </div>
+        </div>
 
-
-
-        <PDFDownloadLink document={downloadPdf(this.state.boardHistory, this.state.winnerHistory)} fileName="somename.pdf">
-          {({ blob, url, loading, error }) => <button className="topMenu">Download</button>}
-        </PDFDownloadLink>
-
-        {/* <button className="topMenu"
-          onClick={() => downloadPdf(this.state.boardHistory, this.state.winnerHistory)}>Download</button>
-
-        <PDFDownloadLink document={<MyDoc />} fileName="somename.pdf">
-          {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download now!')}
-        </PDFDownloadLink> */}
-
-
-
-        {/* <button className="topMenu" onClick={() => this.resetHistory()}>Reset</button> */}
-
-        <p className="playing"> Playing <span className={this.state.player ? 'yPlayer' : 'rPlayer'}>{FULL}</span></p>
+        <p className="playing"> Playing <span className={this.state.player ? 'yellowColor' : 'redColor'}>{FULL}</span></p>
 
 
         <div>

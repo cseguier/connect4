@@ -6,10 +6,25 @@ export function getHistoryLayout(boardHistory, winnerHistory) {
   var layout = []
 
   boardHistory.forEach((e, i) => {
+    var styleDiv, styleTable = ''
+    switch (winnerHistory[i]) {
+      case 'Yellow':
+        styleDiv = 'yellowColor'
+        styleTable = 'yellowBorder'
+        break;
+      case 'Red':
+        styleDiv = 'redColor'
+        styleTable = 'redBorder'
+        break;
+      default:
+        styleDiv = 'drawColor'
+        styleTable = 'drawBorder'
+        break;
+    }
     layout.push(
       <div className='lineup'>
-        <div className={winnerHistory[i] ? 'yPlayer' : 'rPlayer'}>{winnerHistory[i] ? 'Yellow' : 'Red'}</div>
-        <table className={(winnerHistory[i] ? 'yellow' : 'red') + ' gameHistory'}>
+        <div className={styleDiv}>{winnerHistory[i] === '' ? 'Draw' : winnerHistory[i]}</div>
+        <table className={styleTable + ' gameHistory'}>
           <tbody>
             {BOARD.map(row =>
               <tr>
