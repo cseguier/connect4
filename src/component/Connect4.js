@@ -1,4 +1,6 @@
 import React from "react";
+import './footer.css'
+import cv from './cv.pdf'
 import getNewBoard from './GetNewBoard.js'
 import { FULL, EMPTY, BUTTONS, BOARD } from './Parameters'
 import { getHistoryLayout } from './History'
@@ -148,7 +150,22 @@ export default class Connect4 extends React.Component {
         </div>
         {historyLayout}
 
-      </div >
+        <div className="cvFooter">
+
+          <a className="linkContainer" href={cv} download="cseguier_resume">
+            <div className="cvContainer">
+
+              <span className="arc">Download my Resumey</span>
+              <div className="closeAD">X</div>
+              <div className="hearts">😍</div>
+              <div className="thumb">👍</div>
+
+            </div>
+          </a>
+
+        </div>
+
+      </div>
     );
   }
 }

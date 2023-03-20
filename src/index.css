@@ -4,11 +4,12 @@ html {
 }
 
 body {
-  background-color: #272727;
+  background-color: rgb(39, 39, 39);
   color: #bebebe;
   font-family: sans-serif;
   height: 100%;
   text-align: center;
+  margin-top: 0px;
 }
 
 div.upSquare {
