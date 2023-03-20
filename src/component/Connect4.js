@@ -152,15 +152,13 @@ export default class Connect4 extends React.Component {
 
         <div className="cvFooter">
 
-          <a className="linkContainer" href={cv} download="cseguier_resume">
-            <div className="cvContainer">
+          <a className="cvContainer" href={cv} download="cseguier_resume">
 
-              <span className="arc">Download my Resumey</span>
-              <div className="closeAD">X</div>
-              <div className="hearts">😍</div>
-              <div className="thumb">👍</div>
+            <span className="arc">Download my Resumey</span>
+            <div className="closeAD">X</div>
+            <div className="hearts">😍</div>
+            <div className="thumb">👍</div>
 
-            </div>
           </a>
 
         </div>

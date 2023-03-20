@@ -237,23 +237,22 @@ div.thumb {
 
 }
 
-a.linkContainer {
+
+a.cvContainer {
+    display: block;
     width: 500px;
     height: 80px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.8);
+
     text-decoration: none;
     overflow: hidden;
     color: white;
-}
 
-div.cvContainer {
     position: relative;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 500px;
-    height: 80px;
     margin: auto;
     margin-bottom: 5px;
-    border: 1px solid white;
 }
 
 span.arc {
