@@ -50,7 +50,6 @@ table.gameHistory {
   border-radius: 10%;
   border-top: none;
   font-size: 10px;
-  margin: 30px;
   padding: 5px;
   margin-top: 0px;
 }
@@ -74,6 +73,10 @@ td.gameHistory {
 
 div.lineup {
   display: inline-block;
+}
+
+div.historyContainer {
+  margin-bottom: 70px;
 }
 
 button {

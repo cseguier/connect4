@@ -22,11 +22,11 @@ export default class Connect4 extends React.Component {
     this.addNewToken = this.addNewToken.bind(this);
   }
 
-  resetBoard() {
+  newGame() {
     this.setState({
       gameStatus: 'isGoing',
       winner: '',
-      player: (this.state.winner !== '' ? !(this.state.winner) : true),
+      player: (this.state.player),
       board: Array(42).fill(''),
     });
   }
@@ -124,7 +124,7 @@ export default class Connect4 extends React.Component {
             <button className="topMenu" onClick={() => this.resetGame()}>Reset</button>
           </div>
           <div>
-            <button className="topMenu" onClick={() => this.resetBoard()}>New Game</button>
+            <button className="topMenu" onClick={() => this.newGame()}>New Game</button>
           </div>
           <div>
             <PDFDownloadLink document={downloadPdf(this.state.boardHistory, this.state.winnerHistory)} fileName="cseguier_connect4.pdf">
@@ -148,8 +148,10 @@ export default class Connect4 extends React.Component {
             </tbody>
           </table>
         </div>
-        {historyLayout}
 
+        <div className="historyContainer">
+          {historyLayout}
+        </div>
         <div className="cvFooter">
 
           <a className="cvContainer" href={cv} download="cseguier_resume">
