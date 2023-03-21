@@ -156,8 +156,8 @@ export default class Connect4 extends React.Component {
 
             <span className="arc">Download my Resumey</span>
             <div className="closeAD">X</div>
-            <div className="hearts">😍</div>
-            <div className="thumb">👍</div>
+            <div className="hearts emojiStyle">😍</div>
+            <div className="thumb emojiStyle">👍</div>
 
           </a>
 

@@ -1,566 +1,583 @@
 div.cvFooter {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 div.closeAD {
-    margin: 5px;
-    float: right;
-    cursor: pointer;
+  margin: 5px;
+  float: right;
+  cursor: pointer;
 }
 
 div.hearts {
-    padding-right: 10px;
-    padding-top: 10px;
-    float: right;
-    font-size: 50px;
-    transform: rotate(30deg);
-    text-shadow: white 1px 1px 10px;
-
-    -webkit-animation: emojiRainbow 28s linear infinite;
-    -z-animation: emojiRainbow 28s linear infinite;
-    -o-animation: emojiRainbow 28s linear infinite;
-    animation: emojiRainbow 28s linear infinite;
+  float: right;
+  transform: rotate(30deg);
 }
 
 div.thumb {
+  float: left;
+  transform: rotate(-20deg);
+}
+
+div.emojiStyle {
+  text-shadow: white 1px 1px 10px;
+  -webkit-animation: emojiRainbow 28s linear infinite;
+  -z-animation: emojiRainbow 28s linear infinite;
+  -o-animation: emojiRainbow 28s linear infinite;
+  animation: emojiRainbow 28s linear infinite;
+}
+
+a.cvContainer {
+  display: block;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  overflow: hidden;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+span.arc {
+  position: relative;
+  overflow: hidden;
+  top: 33%;
+  color: black;
+  text-align: center;
+
+  -webkit-animation: rainbow 28s linear infinite;
+  -z-animation: rainbow 28s linear infinite;
+  -o-animation: rainbow 28s linear infinite;
+  animation: rainbow 28s linear infinite;
+}
+
+a.cvContainer:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.3) 35%,
+      rgba(255, 255, 255, 0.5) 40%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.5) 60%,
+      rgba(255, 255, 255, 0.3) 65%,
+      rgba(255, 255, 255, 0) 70%);
+
+
+  -webkit-animation: shine 3s infinite linear;
+  -z-animation: shine 3s infinite linear;
+  -o-animation: shine 3s infinite linear;
+  animation: shine 3s infinite linear;
+}
+
+
+@media only screen and not (min-width: 768px) {
+
+  div.hearts {
+    padding-right: 5px;
+    padding-top: 6px;
+    font-size: 30px;
+  }
+
+  div.thumb {
+    padding-left: 5px;
+    padding-top: 6px;
+    font-size: 30px;
+  }
+
+  a.cvContainer {
+    width: 90%;
+    height: 50px;
+  }
+
+  span.arc {
+    font-size: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+  div.hearts {
+    padding-right: 10px;
+    padding-top: 10px;
+    font-size: 50px;
+  }
+
+  div.thumb {
     padding-left: 20px;
     padding-top: 10px;
-    float: left;
     font-size: 50px;
-    transform: rotate(-20deg);
-    text-shadow: white 1px 1px 10px;
+  }
 
-    -webkit-animation: emojiRainbow 28s linear infinite;
-    -z-animation: emojiRainbow 28s linear infinite;
-    -o-animation: emojiRainbow 28s linear infinite;
-    animation: emojiRainbow 28s linear infinite;
+  a.cvContainer {
+    width: 500px;
+    height: 80px;
+  }
+
+  span.arc {
+    font-size: 30px;
+  }
+
 }
+
 
 
 
 @-webkit-keyframes emojiRainbow {
 
-    0% {
-        text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
-    }
+  0% {
+    text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
+  }
 
-    10% {
-        text-shadow: rgba(255, 154, 0, 1) 1px 1px 10px;
-    }
+  10% {
+    text-shadow: rgba(255, 154, 0, 1) 1px 1px 10px;
+  }
 
-    20% {
-        text-shadow: rgba(208, 222, 33, 1) 1px 1px 10px;
-    }
+  20% {
+    text-shadow: rgba(208, 222, 33, 1) 1px 1px 10px;
+  }
 
-    30% {
-        text-shadow: rgba(79, 220, 74, 1) 1px 1px 10px;
-    }
+  30% {
+    text-shadow: rgba(79, 220, 74, 1) 1px 1px 10px;
+  }
 
-    40% {
-        text-shadow: rgba(63, 218, 216, 1) 1px 1px 10px;
-    }
+  40% {
+    text-shadow: rgba(63, 218, 216, 1) 1px 1px 10px;
+  }
 
-    50% {
-        text-shadow: rgba(47, 201, 226, 1) 1px 1px 10px;
-    }
+  50% {
+    text-shadow: rgba(47, 201, 226, 1) 1px 1px 10px;
+  }
 
-    60% {
-        text-shadow: rgba(28, 127, 238, 1) 1px 1px 10px;
-    }
+  60% {
+    text-shadow: rgba(28, 127, 238, 1) 1px 1px 10px;
+  }
 
-    70% {
-        text-shadow: rgba(95, 21, 242, 1) 1px 1px 10px;
-    }
+  70% {
+    text-shadow: rgba(95, 21, 242, 1) 1px 1px 10px;
+  }
 
-    80% {
-        text-shadow: rgba(186, 12, 248, 1) 1px 1px 10px;
-    }
+  80% {
+    text-shadow: rgba(186, 12, 248, 1) 1px 1px 10px;
+  }
 
-    90% {
-        text-shadow: rgba(251, 7, 217, 1) 1px 1px 10px;
-    }
+  90% {
+    text-shadow: rgba(251, 7, 217, 1) 1px 1px 10px;
+  }
 
-    100% {
-        text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
-    }
+  100% {
+    text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
+  }
 
 
 }
 
 @-moz-keyframes emojiRainbow {
 
-    0% {
-        text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
-    }
+  0% {
+    text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
+  }
 
-    10% {
-        text-shadow: rgba(255, 154, 0, 1) 1px 1px 10px;
-    }
+  10% {
+    text-shadow: rgba(255, 154, 0, 1) 1px 1px 10px;
+  }
 
-    20% {
-        text-shadow: rgba(208, 222, 33, 1) 1px 1px 10px;
-    }
+  20% {
+    text-shadow: rgba(208, 222, 33, 1) 1px 1px 10px;
+  }
 
-    30% {
-        text-shadow: rgba(79, 220, 74, 1) 1px 1px 10px;
-    }
+  30% {
+    text-shadow: rgba(79, 220, 74, 1) 1px 1px 10px;
+  }
 
-    40% {
-        text-shadow: rgba(63, 218, 216, 1) 1px 1px 10px;
-    }
+  40% {
+    text-shadow: rgba(63, 218, 216, 1) 1px 1px 10px;
+  }
 
-    50% {
-        text-shadow: rgba(47, 201, 226, 1) 1px 1px 10px;
-    }
+  50% {
+    text-shadow: rgba(47, 201, 226, 1) 1px 1px 10px;
+  }
 
-    60% {
-        text-shadow: rgba(28, 127, 238, 1) 1px 1px 10px;
-    }
+  60% {
+    text-shadow: rgba(28, 127, 238, 1) 1px 1px 10px;
+  }
 
-    70% {
-        text-shadow: rgba(95, 21, 242, 1) 1px 1px 10px;
-    }
+  70% {
+    text-shadow: rgba(95, 21, 242, 1) 1px 1px 10px;
+  }
 
-    80% {
-        text-shadow: rgba(186, 12, 248, 1) 1px 1px 10px;
-    }
+  80% {
+    text-shadow: rgba(186, 12, 248, 1) 1px 1px 10px;
+  }
 
-    90% {
-        text-shadow: rgba(251, 7, 217, 1) 1px 1px 10px;
-    }
+  90% {
+    text-shadow: rgba(251, 7, 217, 1) 1px 1px 10px;
+  }
 
-    100% {
-        text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
-    }
+  100% {
+    text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
+  }
 
 
 }
 
 @-o-keyframes emojiRainbow {
 
-    0% {
-        text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
-    }
+  0% {
+    text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
+  }
 
-    10% {
-        text-shadow: rgba(255, 154, 0, 1) 1px 1px 10px;
-    }
+  10% {
+    text-shadow: rgba(255, 154, 0, 1) 1px 1px 10px;
+  }
 
-    20% {
-        text-shadow: rgba(208, 222, 33, 1) 1px 1px 10px;
-    }
+  20% {
+    text-shadow: rgba(208, 222, 33, 1) 1px 1px 10px;
+  }
 
-    30% {
-        text-shadow: rgba(79, 220, 74, 1) 1px 1px 10px;
-    }
+  30% {
+    text-shadow: rgba(79, 220, 74, 1) 1px 1px 10px;
+  }
 
-    40% {
-        text-shadow: rgba(63, 218, 216, 1) 1px 1px 10px;
-    }
+  40% {
+    text-shadow: rgba(63, 218, 216, 1) 1px 1px 10px;
+  }
 
-    50% {
-        text-shadow: rgba(47, 201, 226, 1) 1px 1px 10px;
-    }
+  50% {
+    text-shadow: rgba(47, 201, 226, 1) 1px 1px 10px;
+  }
 
-    60% {
-        text-shadow: rgba(28, 127, 238, 1) 1px 1px 10px;
-    }
+  60% {
+    text-shadow: rgba(28, 127, 238, 1) 1px 1px 10px;
+  }
 
-    70% {
-        text-shadow: rgba(95, 21, 242, 1) 1px 1px 10px;
-    }
+  70% {
+    text-shadow: rgba(95, 21, 242, 1) 1px 1px 10px;
+  }
 
-    80% {
-        text-shadow: rgba(186, 12, 248, 1) 1px 1px 10px;
-    }
+  80% {
+    text-shadow: rgba(186, 12, 248, 1) 1px 1px 10px;
+  }
 
-    90% {
-        text-shadow: rgba(251, 7, 217, 1) 1px 1px 10px;
-    }
+  90% {
+    text-shadow: rgba(251, 7, 217, 1) 1px 1px 10px;
+  }
 
-    100% {
-        text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
-    }
+  100% {
+    text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
+  }
 
 
 }
 
 @keyframes emojiRainbow {
 
-    0% {
-        text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
-    }
+  0% {
+    text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
+  }
 
-    10% {
-        text-shadow: rgba(255, 154, 0, 1) 1px 1px 10px;
-    }
+  10% {
+    text-shadow: rgba(255, 154, 0, 1) 1px 1px 10px;
+  }
 
-    20% {
-        text-shadow: rgba(208, 222, 33, 1) 1px 1px 10px;
-    }
+  20% {
+    text-shadow: rgba(208, 222, 33, 1) 1px 1px 10px;
+  }
 
-    30% {
-        text-shadow: rgba(79, 220, 74, 1) 1px 1px 10px;
-    }
+  30% {
+    text-shadow: rgba(79, 220, 74, 1) 1px 1px 10px;
+  }
 
-    40% {
-        text-shadow: rgba(63, 218, 216, 1) 1px 1px 10px;
-    }
+  40% {
+    text-shadow: rgba(63, 218, 216, 1) 1px 1px 10px;
+  }
 
-    50% {
-        text-shadow: rgba(47, 201, 226, 1) 1px 1px 10px;
-    }
+  50% {
+    text-shadow: rgba(47, 201, 226, 1) 1px 1px 10px;
+  }
 
-    60% {
-        text-shadow: rgba(28, 127, 238, 1) 1px 1px 10px;
-    }
+  60% {
+    text-shadow: rgba(28, 127, 238, 1) 1px 1px 10px;
+  }
 
-    70% {
-        text-shadow: rgba(95, 21, 242, 1) 1px 1px 10px;
-    }
+  70% {
+    text-shadow: rgba(95, 21, 242, 1) 1px 1px 10px;
+  }
 
-    80% {
-        text-shadow: rgba(186, 12, 248, 1) 1px 1px 10px;
-    }
+  80% {
+    text-shadow: rgba(186, 12, 248, 1) 1px 1px 10px;
+  }
 
-    90% {
-        text-shadow: rgba(251, 7, 217, 1) 1px 1px 10px;
-    }
+  90% {
+    text-shadow: rgba(251, 7, 217, 1) 1px 1px 10px;
+  }
 
-    100% {
-        text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
-    }
+  100% {
+    text-shadow: rgba(255, 0, 0, 1) 1px 1px 10px;
+  }
 
 
 }
 
-
-a.cvContainer {
-    display: block;
-    width: 500px;
-    height: 80px;
-    border: 1px solid white;
-    background-color: rgba(0, 0, 0, 0.8);
-
-    text-decoration: none;
-    overflow: hidden;
-    color: white;
-
-    position: relative;
-    overflow: hidden;
-    margin: auto;
-    margin-bottom: 5px;
-}
-
-span.arc {
-    position: relative;
-    overflow: hidden;
-    top: 33%;
-
-    font-size: 30px;
-    color: black;
-    text-align: center;
-
-    -webkit-animation: rainbow 28s linear infinite;
-    -z-animation: rainbow 28s linear infinite;
-    -o-animation: rainbow 28s linear infinite;
-    animation: rainbow 28s linear infinite;
-}
-
-div.cvContainer:before {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 100%;
-    background-image: linear-gradient(120deg,
-            rgba(255, 255, 255, 0) 30%,
-            rgba(255, 255, 255, 0.3) 35%,
-            rgba(255, 255, 255, 0.5) 40%,
-            rgba(255, 255, 255, 0.8),
-            rgba(255, 255, 255, 0.5) 60%,
-            rgba(255, 255, 255, 0.3) 65%,
-            rgba(255, 255, 255, 0) 70%);
-
-    top: 0;
-    left: -100px;
-
-    -webkit-animation: shine 3s infinite linear;
-    -z-animation: shine 3s infinite linear;
-    -o-animation: shine 3s infinite linear;
-    animation: shine 3s infinite linear;
-}
 
 @-webkit-keyframes rainbow {
 
-    0% {
-        color: rgba(255, 0, 0, 1);
-    }
+  0% {
+    color: rgba(255, 0, 0, 1);
+  }
 
-    10% {
-        color: rgba(255, 154, 0, 1);
-    }
+  10% {
+    color: rgba(255, 154, 0, 1);
+  }
 
-    20% {
-        color: rgba(208, 222, 33, 1);
-    }
+  20% {
+    color: rgba(208, 222, 33, 1);
+  }
 
-    30% {
-        color: rgba(79, 220, 74, 1);
-    }
+  30% {
+    color: rgba(79, 220, 74, 1);
+  }
 
-    40% {
-        color: rgba(63, 218, 216, 1);
-    }
+  40% {
+    color: rgba(63, 218, 216, 1);
+  }
 
-    50% {
-        color: rgba(47, 201, 226, 1);
-    }
+  50% {
+    color: rgba(47, 201, 226, 1);
+  }
 
-    60% {
-        color: rgba(28, 127, 238, 1);
-    }
+  60% {
+    color: rgba(28, 127, 238, 1);
+  }
 
-    70% {
-        color: rgba(95, 21, 242, 1);
-    }
+  70% {
+    color: rgba(95, 21, 242, 1);
+  }
 
-    80% {
-        color: rgba(186, 12, 248, 1);
-    }
+  80% {
+    color: rgba(186, 12, 248, 1);
+  }
 
-    90% {
-        color: rgba(251, 7, 217, 1);
-    }
+  90% {
+    color: rgba(251, 7, 217, 1);
+  }
 
-    100% {
-        color: rgba(255, 0, 0, 1);
-    }
+  100% {
+    color: rgba(255, 0, 0, 1);
+  }
 
 
 }
 
 @-moz-keyframes rainbow {
 
-    0% {
-        color: rgba(255, 0, 0, 1);
-    }
+  0% {
+    color: rgba(255, 0, 0, 1);
+  }
 
-    10% {
-        color: rgba(255, 154, 0, 1);
-    }
+  10% {
+    color: rgba(255, 154, 0, 1);
+  }
 
-    20% {
-        color: rgba(208, 222, 33, 1);
-    }
+  20% {
+    color: rgba(208, 222, 33, 1);
+  }
 
-    30% {
-        color: rgba(79, 220, 74, 1);
-    }
+  30% {
+    color: rgba(79, 220, 74, 1);
+  }
 
-    40% {
-        color: rgba(63, 218, 216, 1);
-    }
+  40% {
+    color: rgba(63, 218, 216, 1);
+  }
 
-    50% {
-        color: rgba(47, 201, 226, 1);
-    }
+  50% {
+    color: rgba(47, 201, 226, 1);
+  }
 
-    60% {
-        color: rgba(28, 127, 238, 1);
-    }
+  60% {
+    color: rgba(28, 127, 238, 1);
+  }
 
-    70% {
-        color: rgba(95, 21, 242, 1);
-    }
+  70% {
+    color: rgba(95, 21, 242, 1);
+  }
 
-    80% {
-        color: rgba(186, 12, 248, 1);
-    }
+  80% {
+    color: rgba(186, 12, 248, 1);
+  }
 
-    90% {
-        color: rgba(251, 7, 217, 1);
-    }
+  90% {
+    color: rgba(251, 7, 217, 1);
+  }
 
-    100% {
-        color: rgba(255, 0, 0, 1);
-    }
+  100% {
+    color: rgba(255, 0, 0, 1);
+  }
 
 
 }
 
 @-o-keyframes rainbow {
 
-    0% {
-        color: rgba(255, 0, 0, 1);
-    }
+  0% {
+    color: rgba(255, 0, 0, 1);
+  }
 
-    10% {
-        color: rgba(255, 154, 0, 1);
-    }
+  10% {
+    color: rgba(255, 154, 0, 1);
+  }
 
-    20% {
-        color: rgba(208, 222, 33, 1);
-    }
+  20% {
+    color: rgba(208, 222, 33, 1);
+  }
 
-    30% {
-        color: rgba(79, 220, 74, 1);
-    }
+  30% {
+    color: rgba(79, 220, 74, 1);
+  }
 
-    40% {
-        color: rgba(63, 218, 216, 1);
-    }
+  40% {
+    color: rgba(63, 218, 216, 1);
+  }
 
-    50% {
-        color: rgba(47, 201, 226, 1);
-    }
+  50% {
+    color: rgba(47, 201, 226, 1);
+  }
 
-    60% {
-        color: rgba(28, 127, 238, 1);
-    }
+  60% {
+    color: rgba(28, 127, 238, 1);
+  }
 
-    70% {
-        color: rgba(95, 21, 242, 1);
-    }
+  70% {
+    color: rgba(95, 21, 242, 1);
+  }
 
-    80% {
-        color: rgba(186, 12, 248, 1);
-    }
+  80% {
+    color: rgba(186, 12, 248, 1);
+  }
 
-    90% {
-        color: rgba(251, 7, 217, 1);
-    }
+  90% {
+    color: rgba(251, 7, 217, 1);
+  }
 
-    100% {
-        color: rgba(255, 0, 0, 1);
-    }
+  100% {
+    color: rgba(255, 0, 0, 1);
+  }
 
 
 }
 
 @keyframes rainbow {
 
-    0% {
-        color: rgba(255, 0, 0, 1);
-    }
+  0% {
+    color: rgba(255, 0, 0, 1);
+  }
 
-    10% {
-        color: rgba(255, 154, 0, 1);
-    }
+  10% {
+    color: rgba(255, 154, 0, 1);
+  }
 
-    20% {
-        color: rgba(208, 222, 33, 1);
-    }
+  20% {
+    color: rgba(208, 222, 33, 1);
+  }
 
-    30% {
-        color: rgba(79, 220, 74, 1);
-    }
+  30% {
+    color: rgba(79, 220, 74, 1);
+  }
 
-    40% {
-        color: rgba(63, 218, 216, 1);
-    }
+  40% {
+    color: rgba(63, 218, 216, 1);
+  }
 
-    50% {
-        color: rgba(47, 201, 226, 1);
-    }
+  50% {
+    color: rgba(47, 201, 226, 1);
+  }
 
-    60% {
-        color: rgba(28, 127, 238, 1);
-    }
+  60% {
+    color: rgba(28, 127, 238, 1);
+  }
 
-    70% {
-        color: rgba(95, 21, 242, 1);
-    }
+  70% {
+    color: rgba(95, 21, 242, 1);
+  }
 
-    80% {
-        color: rgba(186, 12, 248, 1);
-    }
+  80% {
+    color: rgba(186, 12, 248, 1);
+  }
 
-    90% {
-        color: rgba(251, 7, 217, 1);
-    }
+  90% {
+    color: rgba(251, 7, 217, 1);
+  }
 
-    100% {
-        color: rgba(255, 0, 0, 1);
-    }
+  100% {
+    color: rgba(255, 0, 0, 1);
+  }
 
 
 }
 
 
 @-webkit-keyframes shine {
-    0% {
-        left: -100px
-    }
+  0% {
+    left: -100px
+  }
 
-    20% {
-        left: 100%
-    }
+  20% {
+    left: 100%
+  }
 
-    100% {
-        left: 100%
-    }
+  100% {
+    left: 100%
+  }
 }
 
 @-moz-keyframes shine {
-    0% {
-        left: -100px
-    }
+  0% {
+    left: -100px
+  }
 
-    20% {
-        left: 100%
-    }
+  20% {
+    left: 100%
+  }
 
-    100% {
-        left: 100%
-    }
+  100% {
+    left: 100%
+  }
 }
 
 @-o-keyframes shine {
-    0% {
-        left: -100px
-    }
+  0% {
+    left: -100px
+  }
 
-    20% {
-        left: 100%
-    }
+  20% {
+    left: 100%
+  }
 
-    100% {
-        left: 100%
-    }
+  100% {
+    left: 100%
+  }
 }
 
 @keyframes shine {
-    0% {
-        left: -100px
-    }
+  0% {
+    left: -100px
+  }
 
-    20% {
-        left: 100%
-    }
+  20% {
+    left: 100%
+  }
 
-    100% {
-        left: 100%
-    }
-}
-
-
-
-a.arc-dev {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    height: fit-content;
-    width: fit-content;
-    padding: 10px 30px 10px 30px;
-    border: 3px solid black;
-    color: black;
-    transition: font-weight 1s, background-color 5s;
-    border-left: none;
-    border-right: none;
-    text-decoration: none;
-    text-align: center;
-    background-size: 400% 400%;
+  100% {
+    left: 100%
+  }
 }

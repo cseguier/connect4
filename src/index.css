@@ -1,3 +1,7 @@
+#root {
+  height: 100%;
+}
+
 html {
   height: 100%;
   font-size: 10px;
@@ -9,61 +13,23 @@ body {
   font-family: sans-serif;
   height: 100%;
   text-align: center;
-  margin-top: 0px;
+  margin: 0px;
 }
 
-div.upSquare {
-  width: 0;
-  height: 0;
-  border-top: 140px solid #6495ed;
-  border-bottom: 140px solid transparent;
-  border-left: 140px solid transparent;
-  position: absolute;
-  right: 0;
+.yellowColor {
+  color: #ffe643;
 }
 
-a.backToTheGate {
-  text-decoration: none;
-  color: #272727;
-  position: absolute;
-  top: -110px;
-  width: 100px;
-  left: -100px;
-  text-align: center;
-  font-size: 16px;
-  font-family: arial;
-  transform: rotate(45deg);
-  display: block;
-  transition: color .15s;
-  will-change: color;
+.redColor {
+  color: #c01d1d;
 }
 
-a.backToTheGate:hover {
-  color: #ffffff;
-}
-
-p.playing {
-  font-size: 30px;
-}
-
-div.rowContainer {
-  height: 95px;
-}
-
-div.victoryBanner {
-  padding-top: 30px;
-  font-size: 40px;
+.drawColor {
+  color: #6495ed;
 }
 
 div.topMenuContainer {
   display: inline-flex;
-}
-
-table {
-  font-size: 40px;
-  margin: 30px;
-  padding: 20px;
-  display: inline-block;
 }
 
 table.tokenB {
@@ -106,11 +72,6 @@ td.gameHistory {
   height: 16px;
 }
 
-td {
-  width: 60px;
-  height: 60px;
-}
-
 div.lineup {
   display: inline-block;
 }
@@ -131,55 +92,180 @@ button.topMenu {
   border: 1px solid #6495ed;
   border-radius: 16px;
   border-bottom: none;
-  height: 48px;
-  margin: 10px;
+  height: 40px;
+  margin: 12px 6px 6px 6px;
   padding-left: 16px;
   padding-right: 16px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-button.topMenu:hover {
-  border: 1px solid #6495ed;
-  box-shadow: #000000 0 4px 8px;
-  transform: translateY(-2px);
+@media only screen and not (min-width: 768px) {
+
+  div.upSquare {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    background-color: #6495ed;
+    top: 0;
+  }
+
+  a.backToTheGate {
+    text-decoration: underline;
+    font-size: 16px;
+    font-family: arial;
+    color: #272727;
+    text-align: center;
+  }
+
+  p.playing {
+    font-size: 20px;
+    margin: 10px 10px 0px 10px;
+  }
+
+  div.rowContainer {
+    height: 50px;
+  }
+
+  div.victoryBanner {
+    padding-top: 30px;
+    font-size: 20px;
+  }
+
+  table {
+    font-size: 20px;
+    margin: 16px;
+    padding: 6px;
+    display: inline-block;
+  }
+
+  td {
+    width: 34px;
+    height: 34px;
+  }
+
+  button.topMenu {
+    height: 40px;
+    margin: 12px 6px 6px 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+  }
+
+  button.topMenu:active {
+    border: 1px solid #000000;
+    box-shadow: #000000 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+  button.arrows {
+    background-color: transparent;
+    color: #bebebe;
+    font-size: 40px;
+  }
+
+  button.arrows:active {
+    transform: translateY(10px);
+  }
 }
 
-button.topMenu:active {
-  border: 1px solid #000000;
-  box-shadow: #000000 0 3px 7px inset;
-  transform: translateY(2px);
-}
 
-button.arrows {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-  background-color: transparent;
-  color: #bebebe;
-  font-size: 60px;
-}
+@media only screen and (min-width: 768px) {
 
-button.arrows:hover {
-  transform: translateY(5px);
-  color: #6495ed;
-}
+  div.upSquare {
+    width: 0;
+    height: 0;
+    border-top: 140px solid #6495ed;
+    border-bottom: 140px solid transparent;
+    border-left: 140px solid transparent;
+    position: absolute;
+    right: 0;
+  }
 
-button.arrows:active {
-  transform: translateY(10px);
-}
+  a.backToTheGate {
+    text-decoration: none;
+    color: #272727;
+    position: absolute;
+    top: -110px;
+    width: 100px;
+    left: -100px;
+    text-align: center;
+    font-size: 16px;
+    font-family: arial;
+    transform: rotate(45deg);
+    display: block;
+    transition: color .15s;
+    will-change: color;
+  }
 
-.yellowColor {
-  color: #ffe643;
-}
+  a.backToTheGate:hover {
+    color: #ffffff;
+  }
 
-.redColor {
-  color: #c01d1d;
-}
+  p.playing {
+    font-size: 30px;
+  }
 
-.drawColor {
-  color: #6495ed;
-}
+  div.rowContainer {
+    height: 95px;
+  }
 
-#root {
-  height: 100%;
+  div.victoryBanner {
+    padding-top: 30px;
+    font-size: 40px;
+  }
+
+  table {
+    font-size: 40px;
+    margin: 30px;
+    padding: 20px;
+    display: inline-block;
+  }
+
+  td {
+    width: 60px;
+    height: 60px;
+  }
+
+  div.lineup {
+    display: inline-block;
+  }
+
+  button.topMenu {
+    height: 48px;
+    margin: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 18px;
+  }
+
+  button.topMenu:hover {
+    border: 1px solid #6495ed;
+    box-shadow: #000000 0 4px 8px;
+    transform: translateY(-2px);
+  }
+
+  button.topMenu:active {
+    border: 1px solid #000000;
+    box-shadow: #000000 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+  button.arrows {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: #bebebe;
+    font-size: 60px;
+  }
+
+  button.arrows:hover {
+    transform: translateY(5px);
+    color: #6495ed;
+  }
+
+  button.arrows:active {
+    transform: translateY(10px);
+  }
 }
